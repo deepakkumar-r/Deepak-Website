@@ -16,7 +16,7 @@
 <header class="l-header">
   <nav class="nav bd-grid">
       <!-- Add checkbox for sidebar toggle -->
-      <input type="checkbox" id="sidebar-toggle" class="sidebar-checkbox">
+      <input type="checkbox" id="sidebar-toggle" class="sidebar-checkbox" aria-label="Toggle sidebar menu">
       <label for="sidebar-toggle" class="nav__sidebar">
           <i class='bx bx-menu'></i>
       </label>
@@ -52,7 +52,7 @@
       </div>
 
       <div class="theme-toggle">
-          <button id="theme-button" class="theme-button">
+          <button id="theme-button" class="theme-button" aria-label="Toggle dark mode" title="Toggle dark mode">
               <i class='bx bx-moon'></i>
           </button>
       </div>
@@ -64,26 +64,24 @@
             <!--===== HOME =====-->
 <section class="home bd-grid" id="home">
     <div class="home__data">
-      <h1 class="home__title">Deepak<br><span class="home__title-color">AI,ML,DL,GenAI</span><br>KPRIET</h1>
+      <h1 class="home__title">Deepak Kumar <br><span class="home__title-color" id="typing-text"></span><span class="typing-cursor">|</span><br></h1>
       <a href="assets/img/Deepak_Resume (2).pdf" download class="button">Download Resume</a>
     </div>
     <div class="home__social">
-      <a href="https://www.linkedin.com/in/deepak-kumar-124909249" class="home__social-icon" target="_blank"><i class='bx bxl-linkedin'></i></a>
-      <a href="mailto:deepakravi1812@gmail.com" class="home__social-icon" target="_blank"><i class='bx bxs-envelope' ></i></a>
-      <a href="https://github.com/deepakkumar-r" class="home__social-icon" target="_blank"><i class='bx bxl-github'></i></a>
-      <a href="https://www.instagram.com/__dk_deepak__/profilecard/?igsh=d3lmb3ZjNzU3ajhu" class="home__social-icon" target="_blank"><i class='bx bxl-instagram'></i></a>
-      <a href="https://www.youtube.com/your-channel" class="home__social-icon" target="_blank"><i class='bx bxl-youtube'></i></a>
+      <a href="https://www.linkedin.com/in/deepak-kumar-124909249" class="home__social-icon" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" title="LinkedIn"><i class='bx bxl-linkedin'></i></a>
+      <a href="mailto:deepakkumarvijayin@gmail.com" class="home__social-icon" target="_blank" rel="noopener noreferrer" aria-label="Email" title="Email"><i class='bx bxs-envelope' ></i></a>
+      <a href="https://github.com/deepakkumar-r" class="home__social-icon" target="_blank" rel="noopener noreferrer" aria-label="GitHub" title="GitHub"><i class='bx bxl-github'></i></a>
+      <a href="https://www.instagram.com/__dk_deepak__/profilecard/?igsh=d3lmb3ZjNzU3ajhu" class="home__social-icon" target="_blank" rel="noopener noreferrer" aria-label="Instagram" title="Instagram"><i class='bx bxl-instagram'></i></a>
+      <a href="https://leetcode.com/u/eHF98m6rg4/" class="home__social-icon leetcode-icon" target="_blank" rel="noopener noreferrer" aria-label="LeetCode" title="LeetCode">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+          <path d="M16.102 17.93l-2.697 2.607c-.466.467-1.111.662-1.823.662s-1.357-.195-1.824-.662L2.573 13.34c-.467-.467-.702-1.15-.702-1.863s.235-1.357.702-1.824l4.99-4.99c.467-.467 1.125-.645 1.837-.645s1.357.195 1.823.662l.689.689 3.748-3.748c.467-.467 1.111-.662 1.823-.662s1.357.195 1.823.662l2.697 2.607c.467.467.662 1.111.662 1.823s-.195 1.357-.662 1.823l-8.485 8.475c-.467.467-1.111.662-1.823.662s-1.357-.195-1.823-.662zm-5.569-5.54c-.192 0-.335-.143-.335-.335s.143-.335.335-.335.335.143.335.335-.143.335-.335.335zm-2.843-2.844c-.192 0-.335-.143-.335-.335s.143-.335.335-.335.335.143.335.335-.143.335-.335.335zm5.569 0c-.192 0-.335-.143-.335-.335s.143-.335.335-.335.335.143.335.335-.143.335-.335.335zm2.843 2.844c-.192 0-.335-.143-.335-.335s.143-.335.335-.335.335.143.335.335-.143.335-.335.335z"/>
+        </svg>
+      </a>
     </div>
     <div class="home__img">
-      <svg class="home__blob" viewBox="0 0 479 467" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-        <mask id="mask0" mask-type="alpha">
-          <path d="M9.19024 145.964C34.0253 76.5814 114.865 54.7299 184.111 29.4823C245.804 6.98884 311.86 -14.9503 370.735 14.143C431.207 44.026 467.948 107.508 477.191 174.311C485.897 237.229 454.931 294.377 416.506 344.954C373.74 401.245 326.068 462.801 255.442 466.189C179.416 469.835 111.552 422.137 65.1576 361.805C17.4835 299.81 -17.1617 219.583 9.19024 145.964Z"/>
-        </mask>
-        <g mask="url(#mask0)">
-          <path d="M9.19024 145.964C34.0253 76.5814 114.865 54.7299 184.111 29.4823C245.804 6.98884 311.86 -14.9503 370.735 14.143C431.207 44.026 467.948 107.508 477.191 174.311C485.897 237.229 454.931 294.377 416.506 344.954C373.74 401.245 326.068 462.801 255.442 466.189C179.416 469.835 111.552 422.137 65.1576 361.805C17.4835 299.81 -17.1617 219.583 9.19024 145.964Z"/>
-          <image class="home__blob-img" x="50" y="60" href="assets/img/k4.png"/>
-        </g>
-      </svg>
+      <div class="home__img-frame">
+        <img src="assets\img\Deepak.jpg" alt="Deepak Kumar" class="home__img-photo">
+      </div>
     </div>
   </section>
 
@@ -93,21 +91,21 @@
 
                 <div class="about__container bd-grid">
                     <div class="about__img">
-                        <img src="assets/img/Deepak.jpg" alt="">
+                        <div class="about__img-frame">
+                            <img src="assets\img\D2.jpg" alt="Deepak Kumar" class="about__img-photo">
+                        </div>
                     </div>
                     
                     <div>
-                        <h2 class="about__subtitle">Deepak Kumar Ravi</h2>
+                        <h2 class="about__subtitle">Deepak Kumar</h2>
                         <div class="about__text">
-                          <p>Prefinal year AIML student in KPRIET - Anna University.</p>
+                          <p><i>Artificial Intelligence and Machine Learning Engineer</i></p>
                           
-                          <ul class="about__list">
-                              <li>Technical Lead and Public Relations Officer @IEEE AESS SB</li>
-                              <li>Design Lead @IEEE Educational Society</li>
-                              <li>OBE Ambassador & IEEE Volunteer</li>
-                              <li>Member - CPC Council , IEEE</li>
-                              <li>Expertise : Artificial Intelligence, Machine Learning,DL,Website Devolpment,Data Analytics, Power BI</li>
-                          </ul>
+                          <div class="about__list">
+                              <p>I am an AI and Machine Learning Engineer with hands-on experience in building intelligent systems, research-driven projects, and real-world applications using modern AI technologies.
+                                My technical expertise spans <span class="about__highlight">Python,computer vision, deep learning Algorithms, and end-to-end AI solution development</span> with a strong problem-solving mindset.
+                                Beyond engineering, I've applied my technical expertise in leadership roles within IEEE, contributing as <span class="about__highlight">Technical Lead, Design Lead, and active volunteer</span>.I am also Served as an <span class="about__highlight">OBE Ambassador, Rotractor IT Wing, and CPC Council member</span>, driving collaboration, innovation, and impactful leadership initiatives.</p>
+                          </div>
                           
                       </div>           
                     </div>                                   
@@ -120,30 +118,131 @@
 
   <div class="projects__container bd-grid">
       <div class="projects__list">
-          <div class="project__item">
-              <h3>1. Slouchometer - AI Model for Posture Correction</h3>
-              <ul class="projects__list">
-                <li>Techniques : CV, ML Algo & Libraries,Python</li>
-                <li>Tool : VSCode</li>
-                <li>Accuracy : 89% </li>
-                
-            </ul>
-              
+          <div class="project__card">
+              <div class="project__card-inner">
+                  <div class="project__card-front">
+                      <div class="project__front-image project__front-image--p1"></div>
+                      <div class="project__front-content">
+                        <h3>1.AI Model for Posture Correction</h3>
+                      </div>
+                  </div>
+                  <div class="project__card-back">
+                      <p>Slouchometer is an AI-powered computer vision system designed to monitor and correct poor posture in real time using a standard webcam. The system leverages pose estimation techniques to analyze upper-body landmarks and classify user posture as either correct or slouched. Upon detecting sustained slouching, the model provides timely alerts to encourage posture correction, promoting long-term ergonomic health.</p>
+                      <p>The application continuously logs posture data and stores it in structured formats for analysis. This data is further utilized to build visualization dashboards that help users track posture trends, identify problem patterns, and measure improvement over time. Slouchometer is a non-intrusive, cost-effective solution suitable for students, professionals, and remote workers, achieving high accuracy while running on commonly available devices.</p>
+                      
+                      <div class="project__links">
+                          <a href="https://drive.google.com/file/d/1wLw_E3QXEd4FsIZ_qYUUd5TwsFaFpEfv/view?usp=sharing" class="project__link" target="_blank" rel="noopener noreferrer"> Documentation</a>
+                      </div>
+                  </div>
+              </div>
           </div>
 
-          <div class="project__item">
-              <h3>2. Driver Drowsiness Detection with Microsoft Azure Custom Vision</h3>
-              
+          <div class="project__card">
+              <div class="project__card-inner">
+                  <div class="project__card-front">
+                      <div class="project__front-image project__front-image--p2"></div>
+                      <div class="project__front-content">
+                        <h3>2. AI Based Learning Engagement Analyzer</h3>
+                      </div>
+                  </div>
+                  <div class="project__card-back">
+                      <p>This project focuses on enhancing the effectiveness of online education by analyzing student engagement using AI models. The system captures live video feeds during online classes and applies computer vision and machine learning models to evaluate facial cues such as attention, distraction, and emotional states like confusion or interest.
+
+                        The engagement metrics are processed in real time and integrated with a custom Learning Management System (LMS). Instructors gain access to analytical dashboards that provide both individual and class-level engagement insights, enabling data-driven instructional decisions. The solution addresses a critical gap in online learning by moving beyond attendance tracking to actual attentiveness and behavioral analysis.</p>
+                      <div class="project__links">
+                          <a href="https://drive.google.com/file/d/10Wko2quzJC6ItZceXRIkQi7NiqztNoQ6/view?usp=sharing" class="project__link" target="_blank" rel="noopener noreferrer"> Documentation</a>
+                      </div>
+                  </div>
+              </div>
           </div>
 
-          <div class="project__item">
-              <h3>3. AI Translation Mobile app - iOS [Mentored by : Zoho Engineers]</h3>
-              
+          <div class="project__card">
+            <div class="project__card-inner">
+                <div class="project__card-front">
+                    <div class="project__front-image project__front-image--p3"></div>
+                    <div class="project__front-content">
+                      <h3>3. Pothole Detection Tracking System</h3>
+                    </div>
+                </div>
+                <div class="project__card-back">
+
+                    <p>This project implements a real-time pothole detection system using the YOLOv8 object detection framework to support smart infrastructure monitoring and safer road conditions. The model is custom-trained on a labeled dataset containing both images and videos, enabling accurate and reliable pothole identification in real-world scenarios.
+
+                      The system delivers high-performance detection with a precision of 98.4% and a mAP@0.5 of 94%, ensuring minimal false positives while maintaining strong detection coverage. It supports both image-based and live video inference, making it suitable for deployment in vehicle-mounted cameras, surveillance systems, or city-wide road monitoring solutions.
+                      
+                      The implementation follows a modular and scalable design, with dedicated components for training, validation, and inference. Real-time bounding boxes with confidence scores are overlaid on detected potholes, allowing clear visual interpretation. The solution is designed for easy deployment and rapid testing, enabling efficient integration into automated road inspection and maintenance workflows.</p>
+                    <div class="project__links">
+                        <a href="https://github.com/deepakkumar-r/Pothole-Detection-using-YOLO-V8" class="project__link" target="_blank" rel="noopener noreferrer"><i class='bx bxl-github'></i> GitHub</a>
+                        <a href="https://drive.google.com/file/d/1cQcCNFEjcj0Zo80GZZQSON8kbQtBcnzQ/view?usp=sharing" class="project__link" target="_blank" rel="noopener noreferrer"> Documentation</a>
+                        <a href="https://www.linkedin.com/posts/deepak-kumar-124909249_computervision-yolov8-potholedetection-activity-7338099005895122945-Y7Wk?utm_source=share&utm_medium=member_desktop&rcm=ACoAAD2JeWwB0sWFJwrECik8x8cOStt8PqqH_0Y" class="project__link" target="_blank" rel="noopener noreferrer"> Demo</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+          <div class="project__card">
+              <div class="project__card-inner">
+                  <div class="project__card-front">
+                      <div class="project__front-image project__front-image--p4"></div>
+                      <div class="project__front-content">
+                        <h3>4. Driver Drowsiness Detection </h3>
+                      </div>
+                  </div>
+                  <div class="project__card-back">
+                      <p>Our Driver Drowsiness and Yawn Detection System uses a live camera feed to continuously monitor the driver’s eyes and mouth.  
+                        Advanced vision algorithms detect eye closure and yawning patterns that indicate fatigue.  
+                        When drowsiness is detected, the system instantly triggers an audio alert to help prevent accidents.  
+                        </p>
+                      <div class="project__links">
+                          <a href="https://github.com/deepakkumar-r/Driver-Drowsiness-Detection" class="project__link" target="_blank" rel="noopener noreferrer"><i class='bx bxl-github'></i> GitHub</a>
+                          <a href="https://drive.google.com/file/d/1cQcCNFEjcj0Zo80GZZQSON8kbQtBcnzQ/view?usp=sharing" class="project__link" target="_blank" rel="noopener noreferrer"> Documentation</a>
+
+                      </div>
+                  </div>
+              </div>
           </div>
 
-          <div class="project__item">
-              <h3>4. ML Model for TuberClosis Detection [Mentored by : Twz Khwan, Hongkong University]</h3>
-              
+          <div class="project__card">
+              <div class="project__card-inner">
+                  <div class="project__card-front">
+                      <div class="project__front-image project__front-image--p5"></div>
+                      <div class="project__front-content">
+                        <h3>5. Heart Disease Prediction by ML Algorithms</h3>
+                      </div>
+                  </div>
+                  <div class="project__card-back">
+                      <p>Our Heart Disease Prediction system uses machine learning algorithms to analyze clinical data such as age, blood pressure, cholesterol, and heart rate.  
+                        By learning patterns from historical patient records, it estimates the risk of developing heart disease with high accuracy.  
+                        This early risk prediction helps doctors and patients make informed, preventive healthcare decisions.  
+                        </p>
+                      <div class="project__links">
+                          <a href="https://github.com/deepakkumar-r/Heart-Disease-Prediction" class="project__link" target="_blank" rel="noopener noreferrer"><i class='bx bxl-github'></i> GitHub</a>
+                      </div>
+                  </div>
+              </div>
+          </div>
+
+          <div class="project__card">
+              <div class="project__card-inner">
+                  <div class="project__card-front">
+                      <div class="project__front-image project__front-image--p6"></div>
+                      <div class="project__front-content">
+                        <h3>6. AI Based Cybersecurity Threat Prediction</h3>
+                      </div>
+                  </div>
+                  <div class="project__card-back">
+                   
+                      <p>Our AI‑based Cybersecurity Threat Prediction System analyzes live network traffic from IoT devices, routers, firewalls, and cloud endpoints in real time.  
+                        Using advanced machine learning models, it detects anomalous patterns to predict potential cyberattacks before they occur.  
+                        The system automatically triggers alerts, blocks malicious IPs, and integrates with dashboards and chatbots for explainable, actionable security insights.  
+                        </p>
+                      <div class="project__links">
+                          <a href="https://github.com/deepakkumar-r/AI-Based-Cyber-Security-Threat-Prediction-" class="project__link" target="_blank" rel="noopener noreferrer"><i class='bx bxl-github'></i> GitHub</a>
+                          <a href="https://drive.google.com/file/d/1cQcCNFEjcj0Zo80GZZQSON8kbQtBcnzQ/view?usp=sharing" class="project__link" target="_blank" rel="noopener noreferrer"> Documentation</a>
+
+                      </div>
+                  </div>
+              </div>
           </div>
       </div>
   </div>
@@ -156,12 +255,43 @@
 
   <div class="publications__container bd-grid">
       <div class="publications__list">
-          <div class="publication__item">
-              <h3>Detecting Drowsy Driving Through Eye Closure and Yawning : Azure Custom Vision System</h3>
-              <a href="https://ieeexplore.ieee.org/document/10762996" class="publication__link">More info →</a>
+          <div class="publication__card">
+              <div class="publication__card-inner">
+                  <div class="publication__card-front">
+                      <div class="publication__front-image publication__front-image--pub1"></div>
+                      <div class="publication__front-content">
+                        <h3>Detecting Drowsy Driving Through Eye Closure and Yawning </h3>
+                      </div>
+                  </div>
+                  <div class="publication__card-back">
+                      <h3>Presented in 4th International Conference on Sustainable Expert Systems (ICSES 2024)</h3>
+                      <p>Published in IEEE. This research focuses on using Azure Custom Vision for detecting driver drowsiness through eye closure and yawning detection.</p>
+                      <div class="publication__links">
+                          <a href="https://ieeexplore.ieee.org/document/10762996" class="publication__link" target="_blank" rel="noopener noreferrer"><i class='bx bx-link-external'></i> View Publication</a>
+                          <a href="https://drive.google.com/file/d/1x1TdLbt9mXMmDnSBbBRct562T-iTSjPq/view?usp=sharing" class="publication__link" target="_blank" rel="noopener noreferrer"><i class='bx bx-file'></i> View Certificate</a>
+                      </div>
+                  </div>
+              </div>
           </div>
 
-         
+          <div class="publication__card">
+            <div class="publication__card-inner">
+                <div class="publication__card-front">
+                    <div class="publication__front-image publication__front-image--pub2"></div>
+                    <div class="publication__front-content">
+                      <h3>Advanced Mediapipe Enabled Sitting Posture Detection and Correction Model</h3>
+                    </div>
+                </div>
+                <div class="publication__card-back">
+                    <h3>Presented in13th International Conference on Intelligent Embedded, MicroElectronics,
+                      Communication and Optical Networks (IEMECON 2025)</h3>
+                    <div class="publication__links">
+                        <a href="#" class="publication__link" target="_blank" rel="noopener noreferrer"><i class='bx bx-link-external'></i> View Publication</a>
+                        <a href="https://drive.google.com/file/d/1uxYJIxDNx1chuXiiW4wIZ9Y4MyiJUkLh/view?usp=sharing" class="publication__link" target="_blank" rel="noopener noreferrer"><i class='bx bx-file'></i> View Certificate</a>
+                    </div>
+                </div>
+            </div>
+        </div>
   </div>
 </section>
 
@@ -171,31 +301,52 @@
               
                 <div class="work__container bd-grid">
                   <div class="work__item">
-                    <a href="#" class="work__img">
-                      <img src="assets/img/Rmc.jpg" alt="">
+                    <div class="work__card">
+                      <div class="work__img">
+                        <img src="assets/img/Rmc.jpg" alt="">
+                      </div>
                       <div class="work__description">Returning Mothers Conference 2024 - Winner Ideathon and Pitchfest with 40,000INR Cash Prize    [IISc Banglore , India]</div>
-                    </a>
+                    </div>
                   </div>
                   <div class="work__item">
-                    <a href="#" class="work__img">
-                      <img src="assets/img/CIT.jpg" alt="">
+                    <div class="work__card">
+                      <div class="work__img">
+                        <img src="assets/img/CIT.jpg" alt="">
+                      </div>
                       <div class="work__description">CIT College - 1st Prize in Paper Presentation with Cash Prize of 3000 INR    [CIT Coimbatore, India]</div>
-                    </a>
+                    </div>
                   </div>
                   <div class="work__item">
-                    <a href="#" class="work__img">
-                      <img src="assets/img/img1.jpg" alt="">
+                    <div class="work__card">
+                      <div class="work__img">
+                        <img src="assets/img/img1.jpg" alt="">
+                      </div>
                       <div class="work__description">Sri Krishna College - 3rd Prize in Paper Presentation With trophy and certificate  [SKCT Coimbatore , India]</div>
-                    </a>
+                    </div>
                   </div>
-                </div>
-              
-                <div class="work__container bd-grid mt-8">
                   <div class="work__item">
-                    <a href="#" class="work__img">
-                      <img src="assets/img/img2.jpg" alt="">
+                    <div class="work__card">
+                      <div class="work__img">
+                        <img src="assets/img/img2.jpg" alt="">
+                      </div>
                       <div class="work__description">KGiSL College - 1st Prize in Paper Presentation with cash prize of 2500 INR  [KGiSL Coimbatore , India]</div>
-                    </a>
+                    </div>
+                  </div>
+                  <div class="work__item">
+                    <div class="work__card">
+                      <div class="work__img">
+                        <img src="assets/img/events/Innovsense.jpg" alt="">
+                      </div>
+                      <div class="work__description">Innovsense 25 </div>
+                    </div>
+                  </div>
+                  <div class="work__item">
+                    <div class="work__card">
+                      <div class="work__img">
+                        <img src="assets/img/events/genai.jpg" alt="">
+                      </div>
+                      <div class="work__description">Google GenAI exchange 2025 Top performer</div>
+                    </div>
                   </div>
                 </div>
               </section>
@@ -205,44 +356,59 @@
   <h2 class="section-title">Certifications</h2>
   
   <div class="certification-slider">
-      <div class="slider-container">
-          <!-- Original set of certificates -->
-          <div class="certification-item">
-            <img src="assets/img/Accenture.jpg" alt="Accenture Certificate">
-            <div class="description">1. Accenture - Data Analytics and Visualization Job Simulation</div>
-        </div>
-          <div class="certification-item">
-              <img src="assets/img/Google.jpg" alt="Google Certificate">
-              <div class="description">2. Google - Crash Course on Python</div>
+      <button class="slider-btn slider-btn-left" id="prevBtn" aria-label="Previous certificate" title="Previous certificate">
+          <i class='bx bx-chevron-left'></i>
+      </button>
+      <div class="slider-wrapper">
+          <div class="slider-container" id="sliderContainer">
+              <div class="certification-item">
+                <img src="assets\img\certificates\OCI25GAIOCP.png" alt="Oracle GenAI Certification">
+                <div class="description">1. Oracle GenAI Professional Certification </div>
+                <a href="https://catalog-education.oracle.com/ords/certview/sharebadge?id=E7AF1B569EF592DE0CBFFD8475DF7DC7872FCEBB1B90FE23ECFEF8B47493367E" class="publication__link">More info →</a>
+              </div>
+              <div class="certification-item">
+                <img src="assets\img\certificates\OCI25DSOCP.png" alt="Oracle DataScience Certification">
+                <div class="description">2. Oracle Data Science Professional Certification </div>
+                <a href="https://catalog-education.oracle.com/ords/certview/sharebadge?id=2B29791A64F4F7DA18EA5777E56C4A8DE5C43D8015D286E73A91B85769669837" class="publication__link">More info →</a>
+              </div>
+              <div class="certification-item">
+                  <img src="assets/img/Google.jpg" alt="Google Certificate">
+                  <div class="description">3. Google - Crash Course on Python</div>
+              </div>
+              <div class="certification-item">
+                <img src="assets/img/Microsoft1.jpg" alt="Microsoft1 Certificate">
+                <div class="description">4. AI on Microsoft Azure</div>
+            </div>
+            <div class="certification-item">
+              <img src="assets/img/IBM.jpg" alt="IBM Certificate">
+              <div class="description">5. IBM - Intro to AI</div>
           </div>
           <div class="certification-item">
-            <img src="assets/img/Microsoft1.jpg" alt="Microsoft1 Certificate">
-            <div class="description">3. AI on Microsoft Azure</div>
+            <img src="assets/img/DeepLearningai.jpg" alt="DeepLearningai Certificate">
+            <div class="description">6. AI for Everyone</div>
         </div>
         <div class="certification-item">
-          <img src="assets/img/IBM.jpg" alt="IBM Certificate">
-          <div class="description">4. IBM - Intro to AI</div>
+          <img src="assets/img/Nasscom Gold.jpg" alt="Nasscom Certificate">
+          <div class="description">7. Gold - Acquiring Data on Nasscom</div>
       </div>
       <div class="certification-item">
-        <img src="assets/img/DeepLearningai.jpg" alt="DeepLearningai Certificate">
-        <div class="description">5. AI for Everyone</div>
+        <img src="assets/img/RMC_certificate.jpg" alt="RMC Certificate">
+        <div class="description">8. RMC Certificate</div>
     </div>
     <div class="certification-item">
-      <img src="assets/img/Nasscom Gold.jpg" alt="Nasscom Certificate">
-      <div class="description">6. Gold - Acquiring Data on Nasscom</div>
-  </div>
-  <div class="certification-item">
-    <img src="assets/img/RMC_certificate.jpg" alt="RMC Certificate">
-    <div class="description">7. RMC Certificate</div>
-</div>
-<div class="certification-item">
-  <img src="assets/img/awsbadge.jpg" alt="AWS Certificate">
-  <div class="description">8. AWS - ML Foundation</div>
-  <a href="https://www.credly.com/badges/aa8bd30c-f614-4a95-a1ea-d849bd862703/public_url" class="publication__link">More info →</a>
-</div>
-          
-         
+      <img src="assets/img/Accenture.jpg" alt="Accenture Certificate">
+      <div class="description">9. Accenture - Data Analytics and Visualization Job Simulation</div>
+    </div>
+    <div class="certification-item">
+      <img src="assets/img/awsbadge.jpg" alt="AWS Certificate">
+      <div class="description">10. AWS - ML Foundation</div>
+      <a href="https://www.credly.com/badges/aa8bd30c-f614-4a95-a1ea-d849bd862703/public_url" class="publication__link">More info →</a>
+    </div>
+          </div>
       </div>
+      <button class="slider-btn slider-btn-right" id="nextBtn" aria-label="Next certificate" title="Next certificate">
+          <i class='bx bx-chevron-right'></i>
+      </button>
   </div>
 </section>
 
@@ -266,9 +432,9 @@
         <footer class="footer">
             <p class="footer__title">Deepak</p>
             <div class="footer__social">
-              <a href="https://www.linkedin.com/in/deepak-kumar-124909249" class="home__social-icon" target="_blank"><i class='bx bxl-linkedin'></i></a>
-              <a href="mailto:deepakravi1812@gmail.com" class="home__social-icon" target="_blank"><i class='bx bxs-envelope' ></i></a>
-              <a href="https://www.instagram.com/__dk_deepak__/profilecard/?igsh=d3lmb3ZjNzU3ajhu" class="home__social-icon" target="_blank"><i class='bx bxl-instagram'></i></a>
+              <a href="https://www.linkedin.com/in/deepak-kumar-124909249" class="home__social-icon" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" title="LinkedIn"><i class='bx bxl-linkedin'></i></a>
+              <a href="mailto:deepakkumarvijayin@gmail.com" class="home__social-icon" target="_blank" rel="noopener noreferrer" aria-label="Email" title="Email"><i class='bx bxs-envelope' ></i></a>
+              <a href="https://www.instagram.com/__dk_deepak__/profilecard/?igsh=d3lmb3ZjNzU3ajhu" class="home__social-icon" target="_blank" rel="noopener noreferrer" aria-label="Instagram" title="Instagram"><i class='bx bxl-instagram'></i></a>
             </div>
             <p class="footer__copy">&#169; Deepakkumar Portfolio. All rigths reserved</p>
         </footer>

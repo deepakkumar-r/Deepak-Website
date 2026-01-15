@@ -151,4 +151,225 @@ const FORM_CONFIG = {
   
   // Initialize the contact form when the DOM is loaded
   document.addEventListener('DOMContentLoaded', initContactForm);
+
+/*===== CERTIFICATE SLIDER NAVIGATION =====*/
+document.addEventListener('DOMContentLoaded', () => {
+  const sliderContainer = document.getElementById('sliderContainer');
+  const prevBtn = document.getElementById('prevBtn');
+  const nextBtn = document.getElementById('nextBtn');
+  
+  if (!sliderContainer || !prevBtn || !nextBtn) return;
+  
+  const items = sliderContainer.querySelectorAll('.certification-item');
+  const gap = 20; // gap from CSS
+  let currentIndex = 0;
+  const maxIndex = items.length - 1;
+  
+  // Get item width dynamically
+  const getItemWidth = () => {
+    if (items.length === 0) return 300;
+    const firstItem = items[0];
+    const computedStyle = window.getComputedStyle(firstItem);
+    return firstItem.offsetWidth + parseInt(computedStyle.marginLeft || 0) + parseInt(computedStyle.marginRight || 0);
+  };
+  
+  // Calculate how many items are visible
+  const getVisibleItems = () => {
+    const wrapper = sliderContainer.parentElement;
+    const containerWidth = wrapper.offsetWidth;
+    const itemWidth = getItemWidth();
+    return Math.max(1, Math.floor(containerWidth / (itemWidth + gap)));
+  };
+  
+  const updateSlider = () => {
+    const itemWidth = getItemWidth();
+    const itemWidthWithGap = itemWidth + gap;
+    const translateX = -currentIndex * itemWidthWithGap;
+    sliderContainer.style.transform = `translateX(${translateX}px)`;
+    
+    // Disable/enable buttons based on position
+    const visibleItems = getVisibleItems();
+    const maxScrollIndex = Math.max(0, maxIndex - visibleItems + 1);
+    
+    prevBtn.style.opacity = currentIndex === 0 ? '0.5' : '1';
+    prevBtn.style.pointerEvents = currentIndex === 0 ? 'none' : 'auto';
+    prevBtn.disabled = currentIndex === 0;
+    
+    nextBtn.style.opacity = currentIndex >= maxScrollIndex ? '0.5' : '1';
+    nextBtn.style.pointerEvents = currentIndex >= maxScrollIndex ? 'none' : 'auto';
+    nextBtn.disabled = currentIndex >= maxScrollIndex;
+  };
+  
+  prevBtn.addEventListener('click', () => {
+    if (currentIndex > 0) {
+      currentIndex--;
+      updateSlider();
+    }
+  });
+  
+  nextBtn.addEventListener('click', () => {
+    const visibleItems = getVisibleItems();
+    const maxScrollIndex = Math.max(0, maxIndex - visibleItems + 1);
+    if (currentIndex < maxScrollIndex) {
+      currentIndex++;
+      updateSlider();
+    }
+  });
+  
+  // Handle window resize
+  let resizeTimeout;
+  window.addEventListener('resize', () => {
+    clearTimeout(resizeTimeout);
+    resizeTimeout = setTimeout(() => {
+      // Reset to start if current position is invalid
+      const visibleItems = getVisibleItems();
+      const maxScrollIndex = Math.max(0, maxIndex - visibleItems + 1);
+      if (currentIndex > maxScrollIndex) {
+        currentIndex = maxScrollIndex;
+      }
+      updateSlider();
+    }, 250);
+  });
+  
+  // Initialize
+  updateSlider();
+});
+
+/*===== TYPING ANIMATION =====*/
+document.addEventListener('DOMContentLoaded', () => {
+  const typingElement = document.getElementById('typing-text');
+  if (!typingElement) return;
+
+  const phrases = [
+    'Artificial Intelligence',
+    'Machine Learning',
+    'Generative AI',
+    'AI Agents',
+    'Frontend Development'
+  ];
+
+  let currentPhraseIndex = 0;
+  let currentCharIndex = 0;
+  let isDeleting = false;
+  let typingSpeed = 100; // Speed of typing (ms)
+  let deletingSpeed = 50; // Speed of deleting (ms)
+  let pauseTime = 2000; // Pause time after completing a phrase (ms)
+
+  function typeText() {
+    const currentPhrase = phrases[currentPhraseIndex];
+
+    if (!isDeleting && currentCharIndex < currentPhrase.length) {
+      // Typing forward
+      typingElement.textContent = currentPhrase.substring(0, currentCharIndex + 1);
+      currentCharIndex++;
+      setTimeout(typeText, typingSpeed);
+    } else if (!isDeleting && currentCharIndex === currentPhrase.length) {
+      // Finished typing, pause before deleting
+      isDeleting = true;
+      setTimeout(typeText, pauseTime);
+    } else if (isDeleting && currentCharIndex > 0) {
+      // Deleting backward
+      typingElement.textContent = currentPhrase.substring(0, currentCharIndex - 1);
+      currentCharIndex--;
+      setTimeout(typeText, deletingSpeed);
+    } else if (isDeleting && currentCharIndex === 0) {
+      // Finished deleting, move to next phrase
+      isDeleting = false;
+      currentPhraseIndex = (currentPhraseIndex + 1) % phrases.length;
+      setTimeout(typeText, 500); // Small delay before starting next phrase
+    }
+  }
+
+  // Start the typing animation
+  typeText();
+});
+
+/*===== MOBILE FLIP CARD SUPPORT =====*/
+document.addEventListener('DOMContentLoaded', () => {
+  // Function to detect if device is touch-enabled
+  const isTouchDevice = () => {
+    return 'ontouchstart' in window || navigator.maxTouchPoints > 0 || 
+           (window.matchMedia && window.matchMedia('(hover: none) and (pointer: coarse)').matches);
+  };
+
+  // Handle project cards
+  const projectCards = document.querySelectorAll('.project__card');
+  projectCards.forEach(card => {
+    const cardInner = card.querySelector('.project__card-inner');
+    const links = card.querySelectorAll('.project__link');
+    
+    // Only add touch support if it's a touch device
+    if (isTouchDevice()) {
+      let isFlipped = false;
+      
+      // Toggle flip on card click/touch (but allow links to work when flipped)
+      cardInner.addEventListener('click', (e) => {
+        // If clicking on a link and card is already flipped, let the link work
+        if (e.target.closest('.project__link') && isFlipped) {
+          return; // Allow normal link behavior
+        }
+        
+        // If clicking on a link but card is not flipped, flip it first
+        if (e.target.closest('.project__link') && !isFlipped) {
+          e.preventDefault();
+          e.stopPropagation();
+          isFlipped = true;
+          cardInner.style.transform = 'rotateY(180deg)';
+          card.classList.add('flipped');
+          return;
+        }
+        
+        // Toggle flip for any other click on the card
+        isFlipped = !isFlipped;
+        if (isFlipped) {
+          cardInner.style.transform = 'rotateY(180deg)';
+          card.classList.add('flipped');
+        } else {
+          cardInner.style.transform = 'rotateY(0deg)';
+          card.classList.remove('flipped');
+        }
+      });
+    }
+  });
+
+  // Handle publication cards
+  const publicationCards = document.querySelectorAll('.publication__card');
+  publicationCards.forEach(card => {
+    const cardInner = card.querySelector('.publication__card-inner');
+    const links = card.querySelectorAll('.publication__link');
+    
+    // Only add touch support if it's a touch device
+    if (isTouchDevice()) {
+      let isFlipped = false;
+      
+      // Toggle flip on card click/touch (but allow links to work when flipped)
+      cardInner.addEventListener('click', (e) => {
+        // If clicking on a link and card is already flipped, let the link work
+        if (e.target.closest('.publication__link') && isFlipped) {
+          return; // Allow normal link behavior
+        }
+        
+        // If clicking on a link but card is not flipped, flip it first
+        if (e.target.closest('.publication__link') && !isFlipped) {
+          e.preventDefault();
+          e.stopPropagation();
+          isFlipped = true;
+          cardInner.style.transform = 'rotateY(180deg)';
+          card.classList.add('flipped');
+          return;
+        }
+        
+        // Toggle flip for any other click on the card
+        isFlipped = !isFlipped;
+        if (isFlipped) {
+          cardInner.style.transform = 'rotateY(180deg)';
+          card.classList.add('flipped');
+        } else {
+          cardInner.style.transform = 'rotateY(0deg)';
+          card.classList.remove('flipped');
+        }
+      });
+    }
+  });
+});
   
